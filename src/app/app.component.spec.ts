@@ -1,8 +1,9 @@
 /* tslint:disable:no-unused-variable */
 
-import { TestBed, async } from '@angular/core/testing';
-import { AppComponent } from './app.component';
-import { SimpleFormComponent } from './simple-form/simple-form.component';
+import {TestBed, async} from '@angular/core/testing';
+import {AppComponent} from './app.component';
+import {SimpleFormComponent} from './simple-form/simple-form.component';
+import {MailService} from "./mail.service";
 
 describe('AppComponent', () => {
   beforeEach(() => {
@@ -11,6 +12,7 @@ describe('AppComponent', () => {
         AppComponent,
         SimpleFormComponent
       ],
+      providers: [MailService],
     });
     TestBed.compileComponents();
   });

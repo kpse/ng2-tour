@@ -12,7 +12,8 @@ describe('AppComponent', () => {
         AppComponent,
         SimpleFormComponent
       ],
-      providers: [MailService],
+      providers: [{provide: 'mail', useClass: MailService},
+        {provide: 'api', useValue: 'api string'}],
     });
     TestBed.compileComponents();
   });

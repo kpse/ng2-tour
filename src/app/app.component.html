@@ -3,7 +3,7 @@
     {{title}}
   </h1>
   <h2>subtitle</h2>
-  <app-simple-form></app-simple-form>
+
   <br>
   {{mail.message}}
   <br>
@@ -12,8 +12,8 @@
   the api is: {{api}}
 
   <ul>
-    <li *ngFor="let message of mail.messages">
-      {{message}}
-    </li>
+    <app-simple-form *ngFor="let message of mail.messages"
+    [message]="message">
+    </app-simple-form>
   </ul>
 </div>

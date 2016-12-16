@@ -4,7 +4,7 @@ import {Component, OnInit, Input} from "@angular/core";
   selector: 'app-simple-form',
   template: `<div>
   {{message}}
-    <input #myInput type="text">
+    <input #myInput type="text" [(ngModel)]="model">
     <button (click)="onClick($event, myInput.value)">Click me</button>
 </div>`,
   styles: []
@@ -12,6 +12,7 @@ import {Component, OnInit, Input} from "@angular/core";
 export class SimpleFormComponent implements OnInit {
 
   @Input() message;
+  model = 'some value';
 
   onClick(event, value) {
     console.log('clicked event:', event);
@@ -19,6 +20,7 @@ export class SimpleFormComponent implements OnInit {
   }
 
   constructor() {
+    setInterval(()=> this.model = Math.random().toString(), 500)
   }
 
   ngOnInit() {

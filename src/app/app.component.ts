@@ -1,5 +1,6 @@
 import {Component, Inject} from '@angular/core';
 import {MailService} from "./mail.service";
+import {HomeComponent} from "./home/home.component";
 import {cpus} from "os";
 
 @Component({

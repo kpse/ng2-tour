@@ -6,11 +6,13 @@ import {HttpModule} from '@angular/http';
 import {AppComponent} from './app.component';
 import {SimpleFormComponent} from './simple-form/simple-form.component';
 import {MailService} from "./mail.service";
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SimpleFormComponent
+    SimpleFormComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

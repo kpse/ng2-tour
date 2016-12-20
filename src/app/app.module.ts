@@ -5,7 +5,7 @@ import {HttpModule} from '@angular/http';
 
 import {AppComponent} from './app.component';
 import {SimpleFormComponent} from './simple-form/simple-form.component';
-import {MailService} from "./mail.service";
+import {MailService} from "./services/mail.service";
 
 @NgModule({
   declarations: [

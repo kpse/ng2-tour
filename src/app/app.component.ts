@@ -1,5 +1,5 @@
 import {Component, Inject} from '@angular/core';
-import {MailService} from "./mail.service";
+import {MailService} from "./services/mail.service";
 import {cpus} from "os";
 
 @Component({

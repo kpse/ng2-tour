@@ -1,7 +1,4 @@
-import {Component, Inject} from '@angular/core';
-import {MailService} from "./mail.service";
-import {HomeComponent} from "./home/home.component";
-import {cpus} from "os";
+import {Component, Inject} from "@angular/core";
 
 @Component({
   selector: 'app-root',
@@ -10,10 +7,10 @@ import {cpus} from "os";
 })
 export class AppComponent {
   title = 'app works!';
-  constructor (
-    @Inject('mail') private mail,
-    @Inject('api') private api
-  ) {}
+
+  constructor(@Inject('mail') private mail,
+              @Inject('api') private api) {
+  }
 
   onUpdate(id, text) {
     console.log('onUpdate', id, text);

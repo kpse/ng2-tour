@@ -6,13 +6,15 @@ import {SimpleFormComponent} from './simple-form/simple-form.component';
 import {MailService} from "./services/mail.service";
 import {FormsModule} from "@angular/forms";
 import {Observable} from "rxjs";
+import {HomeComponent} from "./home/home.component";
 
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        SimpleFormComponent
+        SimpleFormComponent,
+        HomeComponent
       ],
       imports: [ FormsModule ],
       providers: [{provide: 'mail', useClass: MailService},

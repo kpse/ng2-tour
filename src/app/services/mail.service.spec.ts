@@ -10,7 +10,12 @@ describe('MailService', () => {
     });
   });
 
-  it('should ...', inject([MailService], (service: MailService) => {
-    expect(service).toBeTruthy();
+  it('should provide messages', inject([MailService], (service: MailService) => {
+    expect(service.messages.length).toBe(3);
+  }));
+
+  it('should be able to update message', inject([MailService], (service: MailService) => {
+    service.update(0, 'updated');
+    expect(service.messages[0].text).toBe('updated');
   }));
 });

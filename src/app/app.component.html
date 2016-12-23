@@ -14,13 +14,12 @@
   <ul>
     <li *ngFor="let message of mail.messages">{{message.text}}</li>
   </ul>
-
-
-  <app-simple-form *ngFor="let message of mail.messages"
-                   [message]="message.text"
-                   (update)="onUpdate(message.id, $event.text)"
-  >
-  </app-simple-form>
-
-  <app-home></app-home>
+  <br>
+  <app-home>
+    <app-simple-form *ngFor="let message of mail.messages"
+                     [message]="message.text"
+                     (update)="onUpdate(message.id, $event.text)"
+    >
+    </app-simple-form>
+  </app-home>
 </div>

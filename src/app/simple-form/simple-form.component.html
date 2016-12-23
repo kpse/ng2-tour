@@ -1,0 +1,13 @@
+<div>
+  <input #myInput
+         type="text"
+         [(ngModel)]="message"
+         [ngClass]="{mousedown:isMouseDown}"
+         (mousedown)="isMouseDown = true"
+         (mouseup)="isMouseDown = false"
+         (mouseleave)="isMouseDown = false"
+  >
+  <button
+    class="white bg-black code"
+    (click)="update.emit({text:message})">Click me</button>
+</div>

@@ -2,41 +2,8 @@ import {Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation} from 
 
 @Component({
   selector: 'app-simple-form',
-  template: `<div>
-    <input #myInput 
-    type="text" 
-    [(ngModel)]="message"
-    [ngClass]="{mousedown:isMouseDown}"
-    (mousedown)="isMouseDown = true"
-    (mouseup)="isMouseDown = false"
-    (mouseleave)="isMouseDown = false"
-    >
-    <button
-     class="white bg-black code"
-    (click)="update.emit({text:message})">Click me</button>
-</div>`,
-  styles: [`
-:host {
-  display: flex;
-  flex-direction: column;
-}
-*{
-  font-family: Monospace;
-}
-input:focus {
-font-weight: bold;
-outline: none;
-}
-
-button {
-border: none;
-}
-
-.mousedown {
-border: 2px solid green;
-}
-
-`]
+  templateUrl: './simple-form.component.html',
+  styleUrls: ['./simple-form.component.css']
 })
 export class SimpleFormComponent implements OnInit {
 

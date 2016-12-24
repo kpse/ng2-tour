@@ -1,6 +1,10 @@
 <div>
   <h1>Home component</h1>
   <h2>Above inner content</h2>
-  <ng-content></ng-content>
+  <ng-content select="h2"></ng-content>
+  <h3>Between two selectors</h3>
+  <ng-content select="app-simple-form"></ng-content>
+  <ng-content select="[content]"></ng-content>
+  <ng-content select=".with-class"></ng-content>
   <h2>Below inner content</h2>
 </div>

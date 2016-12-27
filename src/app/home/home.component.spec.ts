@@ -1,9 +1,10 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
-import { HomeComponent } from './home.component';
+import {async, ComponentFixture, TestBed} from "@angular/core/testing";
+import {HomeComponent} from "./home.component";
+import {ComponentFactoryResolver} from "@angular/core";
+import {SimpleFormComponent} from "../simple-form/simple-form.component";
+import {BrowserDynamicTestingModule} from "@angular/platform-browser-dynamic/testing";
+import {FormsModule} from "@angular/forms";
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -11,9 +12,15 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
-    })
-    .compileComponents();
+      declarations: [ HomeComponent, SimpleFormComponent ],
+      imports: [ FormsModule ]
+    });
+    TestBed.overrideModule(BrowserDynamicTestingModule, {
+      set: {
+        entryComponents: [ SimpleFormComponent ],
+      },
+    });
+    TestBed.compileComponents();
   }));
 
   beforeEach(() => {

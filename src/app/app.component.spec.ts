@@ -8,6 +8,7 @@ import {FormsModule} from "@angular/forms";
 import {Observable} from "rxjs";
 import {HomeComponent} from "./home/home.component";
 import {FocusInputComponent} from "./focus-input/focus-input.component";
+import {BrowserDynamicTestingModule} from "@angular/platform-browser-dynamic/testing";
 
 describe('AppComponent', () => {
   beforeEach(() => {
@@ -21,6 +22,11 @@ describe('AppComponent', () => {
       imports: [ FormsModule ],
       providers: [{provide: 'mail', useClass: MailService},
         {provide: 'api', useValue: 'api string'}],
+    });
+    TestBed.overrideModule(BrowserDynamicTestingModule, {
+      set: {
+        entryComponents: [ SimpleFormComponent ],
+      },
     });
     TestBed.compileComponents();
   });

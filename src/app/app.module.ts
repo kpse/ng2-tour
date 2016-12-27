@@ -20,6 +20,7 @@ import { FocusInputComponent } from './focus-input/focus-input.component';
     FormsModule,
     HttpModule
   ],
+  entryComponents: [SimpleFormComponent],
   providers: [{provide: 'mail', useClass: MailService},
     {provide: 'api', useValue: 'http://localhost:4200/'}],
   bootstrap: [AppComponent]

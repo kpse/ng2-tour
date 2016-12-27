@@ -6,12 +6,14 @@ import {AppComponent} from "./app.component";
 import {SimpleFormComponent} from "./simple-form/simple-form.component";
 import {HomeComponent} from "./home/home.component";
 import {MailService} from "./services/mail.service";
+import { FocusInputComponent } from './focus-input/focus-input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SimpleFormComponent,
-    HomeComponent
+    HomeComponent,
+    FocusInputComponent
   ],
   imports: [
     BrowserModule,

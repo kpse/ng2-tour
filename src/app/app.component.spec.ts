@@ -7,6 +7,7 @@ import {MailService} from "./services/mail.service";
 import {FormsModule} from "@angular/forms";
 import {Observable} from "rxjs";
 import {HomeComponent} from "./home/home.component";
+import {FocusInputComponent} from "./focus-input/focus-input.component";
 
 describe('AppComponent', () => {
   beforeEach(() => {
@@ -14,7 +15,8 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         SimpleFormComponent,
-        HomeComponent
+        HomeComponent,
+        FocusInputComponent
       ],
       imports: [ FormsModule ],
       providers: [{provide: 'mail', useClass: MailService},

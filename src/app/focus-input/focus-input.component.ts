@@ -1,4 +1,4 @@
-import {Component, OnInit, Renderer, ViewChild} from '@angular/core';
+import {Component, OnInit, Renderer, ViewChild, Input} from '@angular/core';
 
 @Component({
   selector: 'app-focus-input',
@@ -9,6 +9,7 @@ export class FocusInputComponent implements OnInit {
 
   @ViewChild('myFocus') input;
 
+  @Input() message = "default value";
   constructor(private renderer: Renderer) { }
 
   ngOnInit() {

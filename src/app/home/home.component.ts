@@ -23,7 +23,8 @@ export class HomeComponent implements OnInit {
     this.container.createComponent(componentFactory);
     this.container.createComponent(componentFactory);
     this.container.createComponent(componentFactory);
-    this.container.createComponent(componentFactory);
+    let ref = this.container.createComponent(componentFactory);
+    ref.instance.message = "'I'm the last";
   }
 
 }

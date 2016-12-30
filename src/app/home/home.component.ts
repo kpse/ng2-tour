@@ -24,7 +24,16 @@ export class HomeComponent implements OnInit {
     this.container.createComponent(componentFactory);
     this.container.createComponent(componentFactory);
     let ref = this.container.createComponent(componentFactory);
-    ref.instance.message = "'I'm the last";
+    ref.instance.message = "I'm the last";
+
+    let ref2 = this.container.createComponent(componentFactory, 2);
+    ref2.instance.message = "I'm the third";
+  }
+
+  onClick() {
+    let componentFactory = this.resolver.resolveComponentFactory(SimpleFormComponent);
+    let ref = this.container.createComponent(componentFactory, 3);
+    ref.instance.message = "I'm after the third";
   }
 
 }

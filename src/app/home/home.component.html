@@ -15,9 +15,9 @@
 
   <button (click)="onCreate()">Create Template</button>
 
-  <template #myTemplate>
-    <h2>Louis amazing template</h2>
-    <button>One Button won't kill you</button>
+  <template #myTemplate let-desc="desc">
+    <h2>Louis {{desc}} template</h2>
+    <button>One {{desc}} Button won't kill you</button>
   </template>
 
 </div>

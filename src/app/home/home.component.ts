@@ -53,6 +53,9 @@ export class HomeComponent implements OnInit {
   }
 
   onCreate() {
-    this.container.createEmbeddedView(this.template)
+    this.container.createEmbeddedView(this.template, {
+      description: 'sweet',
+      desc: 'short sweet',
+    })
   }
 }

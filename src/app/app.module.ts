@@ -8,6 +8,7 @@ import {HomeComponent} from "./home/home.component";
 import {MailService} from "./services/mail.service";
 import { FocusInputComponent } from './focus-input/focus-input.component';
 import {LogService} from "./services/log-service.service";
+import {ConsoleService} from "./services/console.service";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,11 @@ import {LogService} from "./services/log-service.service";
   entryComponents: [SimpleFormComponent],
   providers: [{provide: 'mail', useClass: MailService},
     {provide: 'api', useValue: 'http://localhost:4200/'},
-    {provide: 'log', useFactory: () => new LogService(true)}
+    ConsoleService,
+    {provide: 'log',
+      useFactory: (consoleService) => new LogService(consoleService, true),
+      deps: [ConsoleService]
+    }
   ],
   bootstrap: [AppComponent]
 })

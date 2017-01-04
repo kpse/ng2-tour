@@ -11,13 +11,15 @@ import {LogService} from "./services/log-service.service";
 import {ConsoleService} from "./services/console.service";
 import {THIRD_PARTY_PROVIDERS} from "./third-party";
 import {API_URL} from "./app.tokens";
+import { FirstDirective } from './directives/first.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     SimpleFormComponent,
     HomeComponent,
-    FocusInputComponent
+    FocusInputComponent,
+    FirstDirective
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,8 @@ import {MailService} from "./services/mail.service";
 import { FocusInputComponent } from './focus-input/focus-input.component';
 import {LogService} from "./services/log-service.service";
 import {ConsoleService} from "./services/console.service";
+import {THIRD_PARTY_PROVIDERS} from "./third-party";
+import {API_URL} from "./app.tokens";
 
 @NgModule({
   declarations: [
@@ -24,12 +26,14 @@ import {ConsoleService} from "./services/console.service";
   ],
   entryComponents: [SimpleFormComponent],
   providers: [{provide: 'mail', useClass: MailService},
-    {provide: 'api', useValue: 'http://localhost:4200/'},
+    {provide: API_URL, useValue: 'http://localhost:4200/'},
     ConsoleService,
-    {provide: 'log',
+    {
+      provide: 'log',
       useFactory: (consoleService) => new LogService(consoleService, true),
       deps: [ConsoleService]
-    }
+    },
+    THIRD_PARTY_PROVIDERS
   ],
   bootstrap: [AppComponent]
 })

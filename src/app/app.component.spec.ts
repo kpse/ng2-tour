@@ -10,6 +10,7 @@ import {HomeComponent} from "./home/home.component";
 import {FocusInputComponent} from "./focus-input/focus-input.component";
 import {BrowserDynamicTestingModule} from "@angular/platform-browser-dynamic/testing";
 import {LogService} from "./services/log-service.service";
+import {API_URL} from "./app.tokens";
 
 describe('AppComponent', () => {
   beforeEach(() => {
@@ -23,7 +24,7 @@ describe('AppComponent', () => {
       imports: [FormsModule],
       providers: [
         {provide: 'mail', useClass: MailService},
-        {provide: 'api', useValue: 'api string'},
+        {provide: API_URL, useValue: 'api string'},
         {provide: 'log', useFactory: () => new LogService(true)}
       ]
     });
@@ -44,7 +45,7 @@ describe('AppComponent', () => {
   it(`should have as title 'app works!'`, async(() => {
     let fixture = TestBed.createComponent(AppComponent);
     let app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('app works!');
+    expect(app.title).toEqual('app works! api string');
   }));
 
   it('should render title in a h1 tag', (done) => {

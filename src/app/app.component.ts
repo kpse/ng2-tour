@@ -1,4 +1,5 @@
 import {Component, Inject} from "@angular/core";
+import {API_URL} from "./app.tokens";
 
 @Component({
   selector: 'app-root',
@@ -6,10 +7,10 @@ import {Component, Inject} from "@angular/core";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = `app works! ${this.api}`;
 
   constructor(@Inject('mail') private mail,
-              @Inject('api') private api,
+              @Inject(API_URL) private api,
               @Inject('log') private logger) {
   }
 

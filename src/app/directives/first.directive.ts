@@ -1,10 +1,14 @@
-import {Directive, HostBinding} from '@angular/core';
+import {Directive, HostBinding, Input} from '@angular/core';
 
 @Directive({
-  selector: '[appFirst]'
+  selector: '[first]'
 })
 export class FirstDirective {
 
+  @Input() first;
+  @HostBinding() get innerText() {
+    return this.first;
+  }
+
   constructor() { }
-  @HostBinding() innerText = `this is the first directive`;
 }

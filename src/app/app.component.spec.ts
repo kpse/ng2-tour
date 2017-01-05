@@ -11,6 +11,8 @@ import {FocusInputComponent} from "./focus-input/focus-input.component";
 import {BrowserDynamicTestingModule} from "@angular/platform-browser-dynamic/testing";
 import {LogService} from "./services/log-service.service";
 import {API_URL} from "./app.tokens";
+import {FirstDirective} from "./directives/first.directive";
+import {BasicComponent} from "./basic/basic.component";
 
 describe('AppComponent', () => {
   beforeEach(() => {
@@ -19,6 +21,8 @@ describe('AppComponent', () => {
         AppComponent,
         SimpleFormComponent,
         HomeComponent,
+        FirstDirective,
+        BasicComponent,
         FocusInputComponent
       ],
       imports: [FormsModule],

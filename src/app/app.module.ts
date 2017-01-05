@@ -12,6 +12,7 @@ import {ConsoleService} from "./services/console.service";
 import {THIRD_PARTY_PROVIDERS} from "./third-party";
 import {API_URL} from "./app.tokens";
 import { FirstDirective } from './directives/first.directive';
+import { BasicComponent } from './basic/basic.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FirstDirective } from './directives/first.directive';
     SimpleFormComponent,
     HomeComponent,
     FocusInputComponent,
-    FirstDirective
+    FirstDirective,
+    BasicComponent
   ],
   imports: [
     BrowserModule,

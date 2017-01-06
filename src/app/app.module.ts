@@ -13,6 +13,8 @@ import {THIRD_PARTY_PROVIDERS} from "./third-party";
 import {API_URL} from "./app.tokens";
 import { FirstDirective } from './directives/first.directive';
 import { BasicComponent } from './basic/basic.component';
+import { TrackDirective } from './directives/track.directive';
+import {TrackingService} from "./services/tracking.service";
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { BasicComponent } from './basic/basic.component';
     HomeComponent,
     FocusInputComponent,
     FirstDirective,
-    BasicComponent
+    BasicComponent,
+    TrackDirective
   ],
   imports: [
     BrowserModule,
@@ -32,6 +35,7 @@ import { BasicComponent } from './basic/basic.component';
   providers: [{provide: 'mail', useClass: MailService},
     {provide: API_URL, useValue: 'http://localhost:4200/'},
     ConsoleService,
+    TrackingService,
     {
       provide: 'log',
       useFactory: (consoleService) => new LogService(consoleService, true),

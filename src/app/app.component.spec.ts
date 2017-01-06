@@ -13,6 +13,7 @@ import {LogService} from "./services/log-service.service";
 import {API_URL} from "./app.tokens";
 import {FirstDirective} from "./directives/first.directive";
 import {BasicComponent} from "./basic/basic.component";
+import {ConsoleService} from "./services/console.service";
 
 describe('AppComponent', () => {
   beforeEach(() => {
@@ -29,7 +30,7 @@ describe('AppComponent', () => {
       providers: [
         {provide: 'mail', useClass: MailService},
         {provide: API_URL, useValue: 'api string'},
-        {provide: 'log', useFactory: () => new LogService(true)}
+        {provide: 'log', useFactory: () => new LogService(new ConsoleService(), true)}
       ]
     });
     TestBed.overrideModule(BrowserDynamicTestingModule, {

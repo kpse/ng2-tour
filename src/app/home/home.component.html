@@ -20,5 +20,14 @@
     <button>One {{desc}} Button won't kill you</button>
   </template>
 
-  <app-basic online [first]="'haha'" track="'app first'"></app-basic>
+  <template #foo let-message="message">
+    <h1>{{message}}</h1>
+  </template>
+
+  <app-basic [first]="'haha'" track="'app first'"></app-basic>
+
+  <div
+    [ngTemplateOutlet]="myTemplate"
+    [ngOutletContext]="coolContent"
+  ></div>
 </div>

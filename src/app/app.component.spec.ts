@@ -14,6 +14,7 @@ import {API_URL} from "./app.tokens";
 import {FirstDirective} from "./directives/first.directive";
 import {BasicComponent} from "./basic/basic.component";
 import {ConsoleService} from "./services/console.service";
+import {RouterTestingModule} from "@angular/router/testing";
 
 describe('AppComponent', () => {
   beforeEach(() => {
@@ -26,7 +27,7 @@ describe('AppComponent', () => {
         BasicComponent,
         FocusInputComponent
       ],
-      imports: [FormsModule],
+      imports: [FormsModule, RouterTestingModule],
       providers: [
         {provide: 'mail', useClass: MailService},
         {provide: API_URL, useValue: 'api string'},

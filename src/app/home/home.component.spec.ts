@@ -1,7 +1,6 @@
 /* tslint:disable:no-unused-variable */
 import {async, ComponentFixture, TestBed} from "@angular/core/testing";
 import {HomeComponent} from "./home.component";
-import {ComponentFactoryResolver} from "@angular/core";
 import {SimpleFormComponent} from "../simple-form/simple-form.component";
 import {BrowserDynamicTestingModule} from "@angular/platform-browser-dynamic/testing";
 import {FormsModule} from "@angular/forms";
@@ -15,7 +14,7 @@ describe('HomeComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ HomeComponent, SimpleFormComponent, FirstDirective, BasicComponent ],
-      imports: [ FormsModule ]
+      imports: [ FormsModule]
     });
     TestBed.overrideModule(BrowserDynamicTestingModule, {
       set: {

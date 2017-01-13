@@ -17,6 +17,7 @@ import {TrackDirective} from './directives/track.directive';
 import {TrackingService} from "./services/tracking.service";
 import {OnlineDirective} from './directives/online.directive';
 import {OnlineService} from "./services/online.service";
+import appRoutes from "./app.routes";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {OnlineService} from "./services/online.service";
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    appRoutes
   ],
   entryComponents: [SimpleFormComponent],
   providers: [{provide: 'mail', useClass: MailService},

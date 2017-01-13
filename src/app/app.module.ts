@@ -18,6 +18,8 @@ import {TrackingService} from "./services/tracking.service";
 import {OnlineDirective} from './directives/online.directive';
 import {OnlineService} from "./services/online.service";
 import appRoutes from "./app.routes";
+import { CrisisCenterComponent } from './crisis-center/crisis-center.component';
+import { HeroesComponent } from './heroes/heroes.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import appRoutes from "./app.routes";
     FirstDirective,
     BasicComponent,
     TrackDirective,
-    OnlineDirective
+    OnlineDirective,
+    CrisisCenterComponent,
+    HeroesComponent
   ],
   imports: [
     BrowserModule,

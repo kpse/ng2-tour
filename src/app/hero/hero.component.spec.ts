@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { HeroComponent } from './hero.component';
+import {RouterTestingModule} from "@angular/router/testing";
 
 describe('HeroComponent', () => {
   let component: HeroComponent;
@@ -11,7 +12,8 @@ describe('HeroComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeroComponent ]
+      declarations: [ HeroComponent ],
+      imports: [RouterTestingModule]
     })
     .compileComponents();
   }));

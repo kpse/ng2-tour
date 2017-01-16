@@ -20,6 +20,7 @@ import {OnlineService} from "./services/online.service";
 import appRoutes from "./app.routes";
 import { CrisisCenterComponent } from './crisis-center/crisis-center.component';
 import { HeroesComponent } from './heroes/heroes.component';
+import { HeroComponent } from './hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { HeroesComponent } from './heroes/heroes.component';
     TrackDirective,
     OnlineDirective,
     CrisisCenterComponent,
-    HeroesComponent
+    HeroesComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule,
